@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<title>Hostal Clarita</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<div class="w3-bar w3-black">
+    <a href="{% url 'home' %}" class="w3-bar-item w3-button">Home</a>
+    <a href="{% url 'comedor' %}" class="w3-bar-item w3-button">Comedor</a>
+    <a href="{% url 'registro' %}" class="w3-bar-item w3-button">Registro Cliente</a>
+    <a href="{% url 'login' %}"  class="w3-bar-item w3-button">Login</a>
+  </div>
+
+
+
+
+      <div class="w3-container w3-teal">
+        <h2>Login Hostal Claria</h2>
+      </div>
+<form class="w3-text-blue" method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button class="w3-btn w3-blue" type="submit">Entrar</button>
+</form>
